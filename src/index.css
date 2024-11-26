@@ -6,6 +6,13 @@
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 /* Modern scrollbar */
@@ -29,6 +36,14 @@ html {
 /* Base styles */
 body {
   @apply bg-white text-black dark:bg-black dark:text-white transition-colors duration-300;
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+}
+
+/* Fix for mobile nav bar */
+.fixed {
   padding-top: env(safe-area-inset-top);
   padding-right: env(safe-area-inset-right);
   padding-bottom: env(safe-area-inset-bottom);
@@ -81,5 +96,3 @@ body {
 .policy-content .last-updated {
   @apply text-sm text-gray-500 dark:text-gray-400 mt-16 pt-8 border-t border-gray-200 dark:border-gray-800;
 }
-
-/* Rest of your existing styles... */

@@ -21,10 +21,10 @@ const App = () => {
 
   return (
     <Router>
-      <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-200">
+      <div className="min-h-screen min-h-[-webkit-fill-available] bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-200">
         <ScrollToTop />
         <Navbar />
-        <main>
+        <main className="pt-[env(safe-area-inset-top)]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/hur-fungerar-det" element={<HowItWorks />} />
